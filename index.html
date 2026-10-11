@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0b1a42">
+<title>Szkoła językowa Opole – Metropolitan Language Professionals (projekt poglądowy A)</title>
+<meta name="description" content="Projekt poglądowy nowej strony głównej MLP: kursy angielskiego dla dzieci i dorosłych, hiszpańskiego, francuskiego oraz szkolenia językowe dla firm w Opolu.">
+<link rel="icon" href="assets/favicon-64.png" type="image/png">
+<link rel="preload" as="image" type="image/webp" href="assets/saladuo-tall-640.webp" imagesrcset="assets/saladuo-tall-480.webp 480w, assets/saladuo-tall-640.webp 640w" imagesizes="100vw" media="(max-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" href="assets/saladuo-wide-1440.webp" imagesrcset="assets/saladuo-wide-960.webp 960w, assets/saladuo-wide-1440.webp 1440w, assets/saladuo-wide-1920.webp 1920w" imagesizes="100vw" media="(min-width: 701px)" fetchpriority="high">
+<link rel="preload" href="assets/fraunces-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/inter.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Fraunces;src:url(assets/fraunces-var.woff2) format("woff2");font-weight:300 800;font-display:swap}
+@font-face{font-family:Fraunces;src:url(assets/fraunces-italic-var.woff2) format("woff2");font-weight:300 700;font-style:italic;font-display:swap}
+@font-face{font-family:Inter;src:url(assets/inter.woff2) format("woff2");font-weight:100 900;font-display:swap}
+:root{
+ --ink:#0b1a42;--navy:#13296b;--brand:#1f45a8;--sky:#4f7cff;--red:#e2453b;--red2:#ff6b4a;--cream:#f7f3ec;--paper:#fffdf9;--muted:#5b6478;--line:rgba(11,26,66,.1);
+ --serif:Fraunces,Georgia,"Times New Roman",serif;--sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+ --r:22px;--ease:cubic-bezier(.2,.7,.2,1)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font:400 17px/1.65 var(--sans);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{margin:0;font-weight:500;line-height:1.05;letter-spacing:-.02em}
+h2{font-family:var(--serif);font-size:clamp(2.3rem,5vw,4.4rem);font-weight:450}
+h2 em,h1 em{font-style:italic;font-weight:400}
+p{margin:0 0 1em}
+.wrap{width:min(1240px,100% - 48px);margin-inline:auto}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:600 .78rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--brand)}
+.eyebrow::before{content:"";width:28px;height:2px;background:currentColor}
+.btn{--b:var(--red);display:inline-flex;align-items:center;justify-content:center;gap:.6em;padding:1.05em 1.6em;border-radius:999px;font:600 1rem/1 var(--sans);text-decoration:none;border:0;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-red{background:linear-gradient(135deg,var(--red),var(--red2));color:#fff;box-shadow:0 10px 30px -8px rgba(226,69,59,.6)}
+.btn-red:hover{transform:translateY(-2px);box-shadow:0 16px 36px -10px rgba(226,69,59,.75)}
+.btn-glass{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.btn-glass:hover{background:rgba(255,255,255,.22)}
+.btn-ink{background:var(--ink);color:#fff}.btn-ink:hover{background:var(--brand)}
+.btn .arr{transition:transform .25s var(--ease)}.btn:hover .arr{transform:translateX(4px)}
+.skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;z-index:100;background:#fff;padding:10px 14px;border-radius:8px}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+/* header */
+.hdr{position:fixed;inset:0 0 auto;z-index:50;padding:14px 0}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:10px 12px 10px 18px;border-radius:999px;background:rgba(9,22,58,.55);border:1px solid rgba(255,255,255,.14);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);box-shadow:0 10px 40px -20px rgba(0,0,0,.5)}
+.logo img{width:104px;height:58px;object-fit:contain}
+.nav{display:flex;gap:28px;font-size:.93rem;font-weight:500}
+.nav a{color:rgba(255,255,255,.86);text-decoration:none;position:relative}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--red2);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.nav a:hover{color:#fff}.nav a:hover::after{transform:scaleX(1)}
+.hdr-r{display:flex;align-items:center;gap:14px}
+.lang{color:rgba(255,255,255,.7);font-size:.8rem;font-weight:600;text-decoration:none;letter-spacing:.06em}
+.lang:hover{color:#fff}
+.hdr .btn{padding:.8em 1.2em;font-size:.92rem}
+/* hero */
+.hero{position:relative;min-height:max(720px,100svh);display:flex;align-items:flex-end;color:#fff;overflow:hidden;isolation:isolate}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%}
+.hero picture img{object-fit:cover;object-position:62% 50%;transform:scale(1.04);animation:kb 18s var(--ease) forwards}
+@keyframes kb{to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:
+ radial-gradient(70% 80% at 90% 0%,rgba(255,107,74,.22),transparent 60%),radial-gradient(60% 70% at 70% 100%,rgba(79,124,255,.25),transparent 60%),
+ linear-gradient(90deg,rgba(5,13,38,.92) 0%,rgba(5,13,38,.7) 40%,rgba(5,13,38,.15) 75%,rgba(5,13,38,0) 100%),
+ linear-gradient(0deg,rgba(7,17,46,.9) 0%,rgba(7,17,46,0) 45%)}
+.hero .wrap{position:relative;z-index:2;padding:150px 0 120px;display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:end}
+.hero .eyebrow{color:#ffd2c4}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(3.1rem,7.4vw,7rem);line-height:.96;letter-spacing:-.035em;margin:22px 0 26px}
+.hero h1 em{color:#fff;background:linear-gradient(100deg,#ffb199,#ff6b4a 60%,#ffd2c4);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.06em}
+.hero .lead{font-size:clamp(1.05rem,1.4vw,1.25rem);color:rgba(255,255,255,.82);max-width:34em;margin-bottom:34px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+.glass{background:linear-gradient(160deg,rgba(255,255,255,.16),rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);border-radius:var(--r);box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.proof{padding:24px 26px;display:grid;gap:18px;max-width:380px;justify-self:end}
+.proof .row{display:flex;gap:14px;align-items:center}
+.proof .row+.row{padding-top:18px;border-top:1px solid rgba(255,255,255,.14)}
+.proof b{display:block;font-size:1.02rem;font-weight:600}
+.proof small{color:rgba(255,255,255,.72);font-size:.86rem}
+.ico{flex:none;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,.14)}
+.ico svg{width:22px;height:22px}
+.stars{color:#ffc24b;letter-spacing:2px;font-size:.95rem}
+.half{background:linear-gradient(90deg,#ffc24b 50%,rgba(255,255,255,.35) 50%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.scroll-hint{position:absolute;z-index:2;left:50%;bottom:26px;transform:translateX(-50%);width:26px;height:42px;border:2px solid rgba(255,255,255,.5);border-radius:14px}
+.scroll-hint::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:#fff;animation:sh 1.8s infinite}
+@keyframes sh{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(14px)}}
+/* marquee */
+.marquee{background:var(--ink);color:#fff;overflow:hidden;border-top:1px solid rgba(255,255,255,.08)}
+.marquee .track{display:flex;width:max-content;animation:mq 38s linear infinite}
+.marquee span{font-family:var(--serif);font-style:italic;font-size:clamp(1.6rem,3vw,2.6rem);padding:22px 0;white-space:nowrap;display:flex;align-items:center}
+.marquee span::after{content:"✦";font-style:normal;font-size:.5em;color:var(--red2);margin:0 .9em}
+.marquee span i{font-style:normal;font-family:var(--sans);font-size:.38em;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-left:.7em;font-weight:600}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* stats */
+.stats{background:var(--cream);padding:90px 0}
+.stats .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.stat{padding:8px 30px;border-left:1px solid var(--line)}
+.stat:first-child{border-left:0;padding-left:0}
+.num{font-family:var(--serif);font-size:clamp(3rem,5.4vw,5rem);line-height:1;letter-spacing:-.03em;color:var(--ink);display:flex;align-items:baseline;gap:4px;font-variant-numeric:lining-nums tabular-nums}
+.num sup{font-size:.4em;color:var(--red);font-family:var(--sans);font-weight:700;vertical-align:top}
+.stat p{margin:14px 0 0;color:var(--muted);font-size:.96rem;max-width:16em}
+/* sections */
+section{position:relative}
+.sec{padding:130px 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:56px}
+.head h2{margin-top:18px;max-width:12em}
+.head p{max-width:30em;color:var(--muted);margin:0}
+/* course cards */
+.courses{display:grid;grid-template-columns:repeat(6,1fr);gap:22px}
+.cc{position:relative;border-radius:var(--r);overflow:hidden;min-height:420px;color:#fff;text-decoration:none;display:flex;flex-direction:column;justify-content:flex-end;padding:30px;isolation:isolate;transition:transform .5s var(--ease),box-shadow .5s var(--ease);box-shadow:0 20px 50px -30px rgba(11,26,66,.5)}
+.cc:hover{transform:translateY(-6px);box-shadow:0 40px 70px -35px rgba(11,26,66,.6)}
+.cc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;z-index:-2;transition:transform 1.2s var(--ease)}
+.cc:hover img{transform:scale(1.06)}
+.cc::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(7,17,46,0) 30%,rgba(7,17,46,.88) 100%)}
+.cc.w3{grid-column:span 3}.cc.w2{grid-column:span 2}
+.cc .tag{position:absolute;top:24px;left:24px;font:600 .74rem/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:.6em .9em;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.cc h3{font-family:var(--serif);font-size:clamp(1.8rem,2.6vw,2.5rem);font-weight:450;margin-bottom:10px}
+.cc p{color:rgba(255,255,255,.82);font-size:.97rem;max-width:30em;margin-bottom:18px}
+.cc .go{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.95rem}
+.cc .go b{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#fff;color:var(--ink);transition:transform .3s var(--ease),background .3s}
+.cc:hover .go b{transform:rotate(-45deg);background:var(--red2);color:#fff}
+.cc.es{background:linear-gradient(150deg,#c8102e 0%,#e2453b 48%,#ffb400 130%)}
+.cc.fr{background:linear-gradient(150deg,#0b2a7a 0%,#1f45a8 50%,#e8eefc 160%)}
+.cc.es::before,.cc.fr::before{background:radial-gradient(90% 70% at 100% 0%,rgba(255,255,255,.18),transparent 60%)}
+.cc .big{position:absolute;top:56px;right:-10px;font-family:var(--serif);font-style:italic;font-size:clamp(4.5rem,8vw,7.5rem);line-height:1;color:rgba(255,255,255,.16);letter-spacing:-.04em;z-index:-1;transition:transform .8s var(--ease)}
+.cc:hover .big{transform:translateX(-14px)}
+/* language selector */
+.langs{list-style:none;padding:0;margin:60px 0 0;display:grid;grid-template-columns:repeat(7,1fr);gap:12px}
+.lt{display:block;height:100%;position:relative;border:1px solid var(--line);border-radius:18px;padding:20px 16px 18px;background:#fff;text-decoration:none;overflow:hidden;transition:border-color .3s,transform .4s var(--ease),box-shadow .4s var(--ease)}
+.lt::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:var(--flag)}
+.lt .hi{font-family:var(--serif);font-style:italic;font-size:1.65rem;line-height:1.1;display:block;margin-bottom:8px;transition:color .3s}
+.lt small{color:var(--muted);font-size:.85rem;font-weight:500}
+.lt:hover{transform:translateY(-4px);border-color:transparent;box-shadow:0 18px 40px -22px rgba(11,26,66,.45)}
+.lt:hover .hi{color:var(--brand)}
+/* why */
+.why{background:var(--ink);color:#fff;overflow:hidden}
+.why::before{content:"";position:absolute;width:900px;height:900px;right:-300px;top:-300px;background:radial-gradient(circle,rgba(79,124,255,.25),transparent 60%);pointer-events:none}
+.why .eyebrow{color:#9fb6ff}
+.why .head p{color:rgba(255,255,255,.7)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.photo-stack{position:relative}
+.photo-stack .main{border-radius:var(--r);overflow:hidden;box-shadow:0 40px 80px -40px rgba(0,0,0,.8)}
+.photo-stack .main img{aspect-ratio:4/3.2;object-fit:cover;width:100%}
+.photo-stack .float{position:absolute;right:-26px;bottom:-34px;padding:20px 22px;max-width:270px;color:#fff}
+.photo-stack .float b{font-family:var(--serif);font-size:1.35rem;font-weight:450;display:block;line-height:1.2;margin-bottom:4px}
+.photo-stack .float small{color:rgba(255,255,255,.75);font-size:.88rem}
+.badges{position:absolute;left:-18px;top:-26px;display:flex;gap:10px;align-items:flex-start}
+.badges img{width:84px;height:auto;filter:drop-shadow(0 12px 20px rgba(0,0,0,.4))}
+.feats{display:grid;gap:0;counter-reset:f}
+.feat{display:grid;grid-template-columns:64px 1fr;gap:6px 18px;padding:24px 0;border-top:1px solid rgba(255,255,255,.12)}
+.feat:last-child{border-bottom:1px solid rgba(255,255,255,.12)}
+.feat::before{counter-increment:f;content:"0" counter(f);grid-row:span 2;font-family:var(--serif);font-style:italic;font-size:1.7rem;color:var(--red2);line-height:1.1}
+.feat h3{font-size:1.15rem;font-weight:600;letter-spacing:-.01em}
+.feat p{margin:0;color:rgba(255,255,255,.7);font-size:.96rem}
+/* b2b */
+.b2b{padding:0 0 130px;background:var(--ink);color:#fff}
+.b2b-card{position:relative;border-radius:32px;overflow:hidden;min-height:560px;display:grid;grid-template-columns:1.05fr .95fr;isolation:isolate;background:linear-gradient(135deg,#1a3a94,#0d2163)}
+.b2b-card .pic{position:relative}
+.b2b-card .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.b2b-card .pic::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,33,99,0) 50%,rgba(13,33,99,1) 100%)}
+.b2b-card .txt{padding:64px 60px;display:flex;flex-direction:column;justify-content:center}
+.b2b-card h2{font-size:clamp(2.1rem,3.8vw,3.4rem);margin:16px 0 20px}
+.b2b-card p{color:rgba(255,255,255,.8)}
+.b2b .eyebrow{color:#ffd2c4}
+.clients{margin-top:60px;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.clients .track{display:flex;gap:56px;width:max-content;animation:mq 50s linear infinite}
+.clients span{font-family:var(--serif);font-size:1.5rem;color:rgba(255,255,255,.55);white-space:nowrap}
+.clients-label{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.62);margin:60px 0 0;font-weight:600}
+/* exams */
+.exams{display:flex;flex-wrap:wrap;gap:12px}
+.exams span{padding:.8em 1.25em;border-radius:999px;border:1px solid var(--line);background:#fff;font-weight:600;font-size:.95rem;transition:background .3s,color .3s,transform .3s var(--ease)}
+.exams span:hover{background:var(--ink);color:#fff;transform:translateY(-2px)}
+/* reviews */
+.rev{background:var(--cream)}
+.rev-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.score{font-family:var(--serif);font-size:clamp(3.4rem,7vw,6rem);line-height:.95;letter-spacing:-.03em;margin:18px 0 12px}
+.score+.stars{font-size:1.6rem}
+.rev .half{background:linear-gradient(90deg,#ffb400 50%,#d9d3c6 50%);-webkit-background-clip:text;background-clip:text}
+.rev .stars{color:#ffb400}
+.quotes{display:grid;gap:18px}
+.q{background:#fff;border-radius:var(--r);padding:28px 30px;box-shadow:0 24px 50px -36px rgba(11,26,66,.4);position:relative}
+.q::before{content:"“";position:absolute;right:26px;top:-6px;font-family:var(--serif);font-size:6rem;line-height:1;color:rgba(31,69,168,.12)}
+.q p{font-family:var(--serif);font-size:1.25rem;line-height:1.45;margin-bottom:14px}
+.q footer{font-size:.88rem;color:var(--muted);display:flex;align-items:center;gap:10px}
+.g{width:22px;height:22px;flex:none}
+.note{font-size:.84rem;color:var(--muted);margin-top:4px}
+/* translations */
+.tl{padding:0}
+.tl-in{display:flex;justify-content:space-between;align-items:center;gap:30px;padding:46px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tl h3{font-family:var(--serif);font-size:clamp(1.6rem,2.6vw,2.2rem);font-weight:450}
+.tl p{margin:8px 0 0;color:var(--muted);max-width:44em}
+.link{display:inline-flex;align-items:center;gap:10px;font-weight:600;text-decoration:none;white-space:nowrap;color:var(--brand)}
+.link:hover .arr{transform:translateX(4px)}.link .arr{transition:transform .25s var(--ease)}
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
+details{border-top:1px solid var(--line)}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:26px 56px 26px 0;font-size:1.15rem;font-weight:600;position:relative;letter-spacing:-.01em}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:4px;top:50%;width:36px;height:36px;margin-top:-18px;border-radius:50%;border:1px solid var(--line);background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230b1a42' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M12 6v12M6 12h12'/%3E%3C/svg%3E") center/16px no-repeat;transition:transform .35s var(--ease),background-color .3s}
+details[open] summary::after{transform:rotate(45deg);background-color:var(--cream)}
+details p{color:var(--muted);margin:0 0 26px;max-width:42em}
+/* cta band */
+.cta-band{padding:0 0 130px}
+.cta-in{position:relative;border-radius:36px;overflow:hidden;padding:90px 70px;color:#fff;background:linear-gradient(120deg,#d93a31 0%,#ff6b4a 55%,#ff9a62 100%);isolation:isolate}
+.cta-in::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(50% 90% at 0% 0%,rgba(255,255,255,.22),transparent 60%),radial-gradient(45% 80% at 100% 100%,rgba(255,196,120,.35),transparent 65%)}
+.cta-in .ghost{position:absolute;right:-20px;bottom:-60px;font-family:var(--serif);font-style:italic;font-size:clamp(8rem,18vw,16rem);line-height:1;color:rgba(255,255,255,.1);z-index:-1;letter-spacing:-.05em}
+.cta-in h2{font-size:clamp(2.4rem,5.4vw,5rem);max-width:11em;margin-bottom:22px}
+.cta-in p{font-size:1.15rem;color:rgba(255,255,255,.9);max-width:34em;margin-bottom:34px}
+.cta-in .btn-white{background:#fff;color:var(--ink)}.cta-in .btn-white:hover{transform:translateY(-2px)}
+.cta-in .btn-glass{border-color:rgba(255,255,255,.6)}
+/* contact */
+.contact{background:var(--cream)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.cbox{background:#fff;border-radius:var(--r);padding:38px;box-shadow:0 24px 50px -38px rgba(11,26,66,.45)}
+.visit{display:grid;grid-template-columns:180px 1fr;gap:26px;align-items:start;margin-top:26px}
+.visit img{border-radius:16px;aspect-ratio:1;object-fit:cover;width:100%}
+.dl{display:grid;gap:16px;margin:0}
+.dl div{display:grid;gap:2px}
+.dl dt{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.dl dd{margin:0;font-weight:500}
+.dl a{text-decoration:none;border-bottom:1px solid var(--line)}.dl a:hover{border-color:var(--brand);color:var(--brand)}
+.todo{display:inline-block;background:#fff1c9;color:#7a5600;border-radius:8px;padding:.15em .55em;font-size:.92em;font-weight:500}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f{display:grid;gap:6px}.f.full{grid-column:1/-1}
+label{font-size:.82rem;font-weight:600;color:var(--muted)}
+input,textarea{font:inherit;padding:.85em 1em;border-radius:12px;border:1px solid rgba(11,26,66,.16);background:var(--paper);width:100%;transition:border-color .2s,box-shadow .2s}
+input:focus,textarea:focus{outline:0;border-color:var(--brand);box-shadow:0 0 0 4px rgba(31,69,168,.12)}
+textarea{min-height:120px;resize:vertical}
+.form-note{grid-column:1/-1;font-size:.8rem;color:var(--muted);margin:0}
+/* footer */
+.ftr{background:var(--ink);color:rgba(255,255,255,.66);padding:80px 0 120px;font-size:.93rem}
+.ftr-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.ftr h4{color:#fff;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;margin:0 0 16px}
+.ftr ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ftr a{text-decoration:none}.ftr a:hover{color:#fff}
+.ftr .bottom{margin-top:60px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);font-size:.82rem;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+/* sticky mobile bar + label */
+.mbar{display:none}
+.demo{position:fixed;left:14px;bottom:14px;z-index:60;font:600 11px/1 var(--sans);letter-spacing:.04em;color:#fff;background:rgba(11,26,66,.7);padding:7px 11px;border-radius:999px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.08s}.js .rv.d2{transition-delay:.16s}.js .rv.d3{transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+ .js .rv{opacity:1;transform:none}
+}
+/* responsive */
+@media (max-width:1100px){
+ .nav{display:none}
+ .langs{grid-template-columns:repeat(4,1fr)}
+ .courses{grid-template-columns:repeat(2,1fr)}
+ .cc.w3,.cc.w2{grid-column:span 1}
+ .cc.wide-m{grid-column:1/-1}
+}
+@media (max-width:900px){
+ .hero .wrap{grid-template-columns:1fr;padding:130px 0 70px}
+ .proof{justify-self:start;max-width:none;width:100%}
+ .stats .grid{grid-template-columns:repeat(2,1fr);gap:36px 0}
+ .stat:nth-child(3){border-left:0;padding-left:0}
+ .head{flex-direction:column;align-items:flex-start;gap:18px}
+ .why-grid,.rev-grid,.faq-grid,.contact-grid,.b2b-card{grid-template-columns:1fr}
+ .why-grid{gap:80px}
+ .b2b-card .pic{min-height:300px}
+ .b2b-card .pic::after{background:linear-gradient(180deg,rgba(13,33,99,0) 40%,rgba(13,33,99,1) 100%)}
+ .b2b-card .txt{padding:10px 30px 44px}
+ .ftr-grid{grid-template-columns:1fr 1fr}
+ .tl-in{flex-direction:column;align-items:flex-start}
+ .sec{padding:96px 0}
+}
+@media (max-width:640px){
+ body{font-size:16px}
+ .wrap{width:min(1240px,100% - 36px)}
+ .hdr{padding:10px 0}
+ .hdr .wrap{padding:8px 8px 8px 14px}
+ .logo img{width:84px;height:47px}
+ .lang{display:none}
+ .hdr .btn span{display:none}.hdr .btn{padding:.75em}
+ .hero{min-height:auto}
+ .hero .wrap{padding:118px 0 50px;gap:28px}
+ .hero h1{font-size:clamp(2.75rem,12.5vw,3.6rem);margin:18px 0 18px}
+ .hero .lead{margin-bottom:26px}
+ .hero-cta .btn{flex:1 1 100%}
+ .scroll-hint{display:none}
+ .proof{padding:18px}
+ .proof .row:nth-child(3){display:none}
+ .stats{padding:64px 0}
+ .stat{padding:0 18px}.stat:nth-child(odd){padding-left:0;border-left:0}
+ .num{font-size:2.9rem}
+ .stat p{font-size:.88rem}
+ .sec{padding:80px 0}
+ .head{margin-bottom:36px}
+ .courses{grid-template-columns:1fr;gap:16px}
+ .cc{min-height:300px;padding:24px}
+ .cc:has(img){min-height:470px}
+ .cc:has(img)::before{background:linear-gradient(180deg,rgba(7,17,46,0) 22%,rgba(7,17,46,.55) 48%,rgba(7,17,46,.95) 78%)}
+ .langs{grid-template-columns:repeat(2,1fr);margin-top:36px}
+ .photo-stack .float{right:12px;bottom:-40px;max-width:230px;padding:16px}
+ .badges{left:10px;top:-24px}.badges img{width:66px}
+ .b2b{padding-bottom:80px}
+ .b2b-card{border-radius:24px}
+ .cta-band{padding-bottom:80px}
+ .cta-in{padding:56px 26px;border-radius:26px}
+ .cta-in .btn{flex:1 1 100%}
+ .cbox{padding:24px}
+ .visit{grid-template-columns:96px 1fr;gap:16px}
+ form{grid-template-columns:1fr}
+ .ftr-grid{grid-template-columns:1fr}
+ .mbar{display:grid;grid-template-columns:1fr 1.3fr;gap:8px;position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:55;padding:8px;border-radius:20px;background:rgba(11,26,66,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 18px 40px -16px rgba(0,0,0,.6)}
+ .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 10px;border-radius:14px;font-weight:600;font-size:.95rem;text-decoration:none;color:#fff}
+ .mbar a:first-child{background:rgba(255,255,255,.12)}
+ .mbar a:last-child{background:linear-gradient(135deg,var(--red),var(--red2))}
+ .mbar svg{width:18px;height:18px}
+ .demo{left:auto;right:14px;bottom:calc(86px + env(safe-area-inset-bottom));font-size:10px;padding:5px 9px;opacity:.85}
+ .hide-m{display:none}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":["EducationalOrganization","LocalBusiness"],"name":"Metropolitan Language Professionals","url":"https://mlp.opole.pl/","email":"info@mlp.opole.pl","telephone":["+48605250009","+48665080009"],"address":{"@type":"PostalAddress","streetAddress":"ul. Ozimska 63A","postalCode":"45-368","addressLocality":"Opole","addressCountry":"PL"}}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Przejdź do treści</a>
+<header class="hdr">
+ <div class="wrap">
+  <a class="logo" href="#" aria-label="Metropolitan Language Professionals – strona główna"><img src="assets/logo-white-300.webp" width="104" height="58" alt="Metropolitan Language Professionals"></a>
+  <nav class="nav" aria-label="Menu główne"><a href="#kursy">Kursy</a><a href="#dlaczego">O szkole</a><a href="#firmy">Dla firm</a><a href="#opinie">Opinie</a><a href="#faq">Pytania</a><a href="#kontakt">Kontakt</a></nav>
+  <div class="hdr-r"><a class="lang" href="https://mlp.opole.pl/en/home/" hreflang="en">EN</a><a class="lang" href="https://mlp.opole.pl/de/startseite/" hreflang="de">DE</a>
+   <a class="btn btn-red" href="tel:+48605250009" aria-label="Zadzwoń: 605 250 009"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg><span>605&nbsp;250&nbsp;009</span></a></div>
+ </div>
+</header>
+
+<main id="main">
+<section class="hero" aria-labelledby="h1">
+ <picture>
+  <source media="(max-width: 700px)" type="image/webp" srcset="assets/saladuo-tall-480.webp 480w, assets/saladuo-tall-640.webp 640w" sizes="100vw">
+  <img src="assets/saladuo-wide-1440.webp" srcset="assets/saladuo-wide-960.webp 960w, assets/saladuo-wide-1440.webp 1440w, assets/saladuo-wide-1920.webp 1920w" sizes="100vw" width="1440" height="545" alt="Sala szkoleniowa z tablicą interaktywną" fetchpriority="high">
+ </picture>
+ <div class="wrap">
+  <div>
+   <span class="eyebrow"><span>Szkoła językowa · Opole<span class="hide-m">, ul.&nbsp;Ozimska&nbsp;63A</span></span></span>
+   <h1 id="h1">Mów pewnie.<br><em>W&nbsp;każdym</em> języku.</h1>
+   <p class="lead">Angielski dla dzieci i&nbsp;dorosłych, hiszpański, francuski i&nbsp;szkolenia językowe dla firm. Indywidualnie lub w&nbsp;małej grupie – w&nbsp;naszej szkole, online albo z&nbsp;dojazdem lektora.</p>
+   <div class="hero-cta">
+    <a class="btn btn-red" href="#kontakt">Zapisz się na kurs <span class="arr" aria-hidden="true">→</span></a>
+    <a class="btn btn-glass" href="#kursy">Zobacz kursy</a>
+   </div>
+  </div>
+  <aside class="proof glass" aria-label="Wyróżnienia">
+   <div class="row"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#ffc24b"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span><div><b>Ocena „Doskonała” w&nbsp;Google</b><small><span class="stars" aria-hidden="true">★★★★<span class="half">★</span></span> &nbsp;92 opinie</small></div></div>
+   <div class="row"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14l-1.5 8 5-3 5 3-1.5-8"/></svg></span><div><b>Laureat Orły Kształcenia 2019</b><small>Wyróżnienie dla szkoły</small></div></div>
+   <div class="row"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg></span><div><b>Parlament Europejski</b><small>Szkolenia językowe od października 2017</small></div></div>
+  </aside>
+ </div>
+ <span class="scroll-hint" aria-hidden="true"></span>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="track">
+ <span>Hello<i>angielski</i></span><span>Hola<i>hiszpański</i></span><span>Bonjour<i>francuski</i></span><span>Hallo<i>niemiecki</i></span><span>Ciao<i>włoski</i></span><span>Cześć<i>polski</i></span><span>Здравствуйте<i>rosyjski</i></span>
+ <span>Hello<i>angielski</i></span><span>Hola<i>hiszpański</i></span><span>Bonjour<i>francuski</i></span><span>Hallo<i>niemiecki</i></span><span>Ciao<i>włoski</i></span><span>Cześć<i>polski</i></span><span>Здравствуйте<i>rosyjski</i></span>
+</div></div>
+
+<section class="stats" aria-label="MLP w liczbach">
+ <div class="wrap grid">
+  <div class="stat rv"><div class="num"><span data-count="92">92</span></div><p>opinie w&nbsp;Google z&nbsp;oceną „Doskonała”</p></div>
+  <div class="stat rv d1"><div class="num"><span data-count="2017" data-from="1990">2017</span></div><p>od tego roku szkolimy dla Parlamentu Europejskiego</p></div>
+  <div class="stat rv d2"><div class="num"><span data-count="500">500</span><sup>+</sup></div><p>uczestników szkoleń w&nbsp;projektach EFS w&nbsp;latach 2010–2015</p></div>
+  <div class="stat rv d3"><div class="num"><span data-count="16">16</span></div><p>specjalistycznych kursów angielskiego – od Business po Medical English</p></div>
+ </div>
+</section>
+
+<section class="sec" id="kursy">
+ <div class="wrap">
+  <div class="head rv">
+   <div><span class="eyebrow">Kursy</span><h2>Znajdź kurs <em>dla siebie</em></h2></div>
+   <p>Uczymy na każdym poziomie, od A1 do C2. Częstotliwość, terminy i&nbsp;formę zajęć ustalamy razem z&nbsp;Tobą – bez płacenia z&nbsp;góry za cały rok.</p>
+  </div>
+  <div class="courses">
+   <a class="cc w3 rv" href="https://mlp.opole.pl/kursy-korepetycje-jezykowe/angielski/">
+    <img src="assets/kids-900.webp" srcset="assets/kids-600.webp 600w, assets/kids-900.webp 900w" sizes="(max-width:640px) 92vw, (max-width:1100px) 46vw, 600px" width="900" height="506" alt="" loading="lazy">
+    <span class="tag">Od 5. roku życia</span>
+    <h3>Angielski dla dzieci</h3>
+    <p>Kursy regularne dopasowane do wieku i&nbsp;poziomu, pomoc przy pracach domowych i&nbsp;przygotowanie do egzaminu ósmoklasisty.</p>
+    <span class="go"><b aria-hidden="true">→</b>Angielski dla dzieci</span>
+   </a>
+   <a class="cc w3 rv d1" href="https://mlp.opole.pl/kursy-korepetycje-jezykowe/angielski/">
+    <img src="assets/workshop-900.webp" srcset="assets/workshop-600.webp 600w, assets/workshop-900.webp 900w" sizes="(max-width:640px) 92vw, (max-width:1100px) 46vw, 600px" width="900" height="600" alt="" loading="lazy">
+    <span class="tag">Ogólny · biznesowy · Cambridge</span>
+    <h3>Angielski dla dorosłych</h3>
+    <p>Kursy ogólne i&nbsp;konwersacyjne, Business, Legal i&nbsp;Medical English oraz przygotowanie do certyfikatów FCE, CAE i&nbsp;CPE.</p>
+    <span class="go"><b aria-hidden="true">→</b>Angielski dla dorosłych</span>
+   </a>
+   <a class="cc w2 es rv" href="https://mlp.opole.pl/kursy-korepetycje-jezykowe/hiszpanski/">
+    <span class="big" aria-hidden="true">¡Hola!</span>
+    <span class="tag">A1–C1 · DELE</span>
+    <h3>Hiszpański</h3>
+    <p>Małe grupy, lektorzy i&nbsp;native speakerzy. Stacjonarnie lub online.</p>
+    <span class="go"><b aria-hidden="true">→</b>Kurs hiszpańskiego</span>
+   </a>
+   <a class="cc w2 fr rv d1" href="https://mlp.opole.pl/kursy-korepetycje-jezykowe/francuski/">
+    <span class="big" aria-hidden="true">Bonjour</span>
+    <span class="tag">A1–C1 · DELF/DALF</span>
+    <h3>Francuski</h3>
+    <p>Kameralne grupy i&nbsp;praktyczne podejście od pierwszych zajęć.</p>
+    <span class="go"><b aria-hidden="true">→</b>Kurs francuskiego</span>
+   </a>
+   <a class="cc w2 wide-m rv d2" href="#firmy">
+    <img src="assets/biz-600.webp" width="600" height="338" alt="" loading="lazy">
+    <span class="tag">B2B</span>
+    <h3>Szkolenia dla firm</h3>
+    <p>Program dopasowany do branży i&nbsp;poziomu zespołu.</p>
+    <span class="go"><b aria-hidden="true">→</b>Oferta dla firm</span>
+   </a>
+  </div>
+  <ul class="langs rv" aria-label="Wszystkie języki">
+   <li><a class="lt" style="--flag:linear-gradient(90deg,#012169 33%,#fff 33% 66%,#c8102e 66%)" href="https://mlp.opole.pl/kursy-korepetycje-jezykowe/angielski/"><span class="hi">Hello</span><small>Angielski</small></a></li>
+   <li><a class="lt" style="--flag:linear-gradient(90deg,#000 33%,#dd0000 33% 66%,#ffce00 66%)" href="https://mlp.opole.pl/kursy-korepetycje-jezykowe/niemiecki/"><span class="hi">Hallo</span><small>Niemiecki</small></a></li>
+   <li><a class="lt" style="--flag:linear-gradient(90deg,#aa151b 25%,#f1bf00 25% 75%,#aa151b 75%)" href="https://mlp.opole.pl/kursy-korepetycje-jezykowe/hiszpanski/"><span class="hi">Hola</span><small>Hiszpański</small></a></li>
+   <li><a class="lt" style="--flag:linear-gradient(90deg,#002654 33%,#fff 33% 66%,#ce1126 66%)" href="https://mlp.opole.pl/kursy-korepetycje-jezykowe/francuski/"><span class="hi">Bonjour</span><small>Francuski</small></a></li>
+   <li><a class="lt" style="--flag:linear-gradient(90deg,#009246 33%,#fff 33% 66%,#ce2b37 66%)" href="https://mlp.opole.pl/kursy-korepetycje-jezykowe/wloski/"><span class="hi">Ciao</span><small>Włoski</small></a></li>
+   <li><a class="lt" style="--flag:linear-gradient(90deg,#fff 50%,#dc143c 50%)" href="https://mlp.opole.pl/kursy-korepetycje-jezykowe/polski-dla-obcokrajowcow/"><span class="hi">Cześć</span><small>Polski dla obcokrajowców</small></a></li>
+   <li><a class="lt" style="--flag:linear-gradient(90deg,#fff 33%,#0039a6 33% 66%,#d52b1e 66%)" href="https://mlp.opole.pl/kursy-korepetycje-jezykowe/"><span class="hi">Привет</span><small>Rosyjski</small></a></li>
+  </ul>
+ </div>
+</section>
+
+<section class="sec why" id="dlaczego">
+ <div class="wrap why-grid">
+  <div class="photo-stack rv">
+   <div class="badges"><img src="assets/orly-120.webp" width="120" height="136" alt="Laureat konkursu Orły Kształcenia 2019" loading="lazy"><img src="assets/oferteo-120.webp" width="120" height="120" alt="Oferteo – Najlepsi 2023" loading="lazy"></div>
+   <div class="main"><img src="assets/sala-board-900.webp" srcset="assets/sala-board-600.webp 600w, assets/sala-board-900.webp 900w, assets/sala-board-1200.webp 1200w" sizes="(max-width:900px) 92vw, 560px" width="900" height="670" alt="Sala szkoleniowa z tablicą interaktywną" loading="lazy"></div>
+   <div class="float glass" style="background:linear-gradient(160deg,rgba(31,69,168,.75),rgba(11,26,66,.7))"><b>Nowoczesne sale w&nbsp;centrum Opola</b><small>z tablicami interaktywnymi – albo lektor dojedzie do Ciebie</small></div>
+  </div>
+  <div>
+   <div class="head rv" style="margin-bottom:34px"><div><span class="eyebrow">Dlaczego MLP</span><h2>Nauka, która <em>dopasowuje się</em> do&nbsp;Ciebie</h2></div></div>
+   <div class="feats">
+    <div class="feat rv"><h3>Dla każdego wieku</h3><p>Od dzieci w&nbsp;wieku 5&nbsp;lat, przez młodzież i&nbsp;dorosłych, po seniorów.</p></div>
+    <div class="feat rv"><h3>Indywidualnie lub w&nbsp;małej grupie</h3><p>Kurs szyty na miarę – a&nbsp;jeśli uczysz się z&nbsp;bliskimi, stworzymy dla Was grupę.</p></div>
+    <div class="feat rv"><h3>Bez płacenia z&nbsp;góry za rok</h3><p>Częstotliwość, czas trwania i&nbsp;okres nauki wybierasz Ty. Cenę dopasowujemy indywidualnie.</p></div>
+    <div class="feat rv"><h3>Odwołane zajęcia nie przepadają</h3><p>Zajęcia odwołane wcześniej odrobisz w&nbsp;dogodnym dla siebie terminie.</p></div>
+    <div class="feat rv"><h3>Lektorzy i&nbsp;native speakerzy</h3><p>Doświadczeni nauczyciele, a&nbsp;na kursach hiszpańskiego, francuskiego i&nbsp;włoskiego także native speakerzy.</p></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="b2b" id="firmy">
+ <div class="wrap">
+  <div class="b2b-card rv">
+   <div class="pic"><img src="assets/biz-900.webp" srcset="assets/biz-600.webp 600w, assets/biz-900.webp 900w, assets/biz-1400.webp 1400w" sizes="(max-width:900px) 92vw, 640px" width="900" height="506" alt="" loading="lazy"></div>
+   <div class="txt">
+    <span class="eyebrow">Szkolenia językowe dla firm</span>
+    <h2>Język, którym Twój zespół <em>zamyka projekty</em></h2>
+    <p>Prowadzimy szkolenia dla firm i&nbsp;instytucji w&nbsp;Opolu, w&nbsp;województwie opolskim i&nbsp;w&nbsp;całej Polsce. Program dopasowujemy do branży i&nbsp;poziomu uczestników (A1–C2) – od angielskiego biznesowego i&nbsp;niemieckiego w&nbsp;biznesie po język techniczny. Wykonujemy też audyty językowe.</p>
+    <div style="margin-top:14px"><a class="btn btn-red" href="#kontakt">Zapytaj o ofertę dla firmy <span class="arr" aria-hidden="true">→</span></a></div>
+   </div>
+  </div>
+  <p class="clients-label">Zaufali nam m.in.</p>
+  <div class="clients" aria-label="Wybrani klienci"><div class="track">
+   <span>Bank ING</span><span>Grupa Żywiec S.A.</span><span>Urząd Miasta Opola</span><span>Coca Cola Company</span><span>Uniwersytet Opolski</span><span>Kompania Piwowarska</span><span>Urząd Marszałkowski Województwa Opolskiego</span><span>Capgemini</span><span>Medtronic Poland</span><span>Sandoz</span><span>Novartis</span><span>Danone</span>
+   <span aria-hidden="true">Bank ING</span><span aria-hidden="true">Grupa Żywiec S.A.</span><span aria-hidden="true">Urząd Miasta Opola</span><span aria-hidden="true">Coca Cola Company</span><span aria-hidden="true">Uniwersytet Opolski</span><span aria-hidden="true">Kompania Piwowarska</span><span aria-hidden="true">Urząd Marszałkowski Województwa Opolskiego</span><span aria-hidden="true">Capgemini</span><span aria-hidden="true">Medtronic Poland</span><span aria-hidden="true">Sandoz</span><span aria-hidden="true">Novartis</span><span aria-hidden="true">Danone</span>
+  </div></div>
+ </div>
+</section>
+
+<section class="sec" id="egzaminy">
+ <div class="wrap">
+  <div class="head rv"><div><span class="eyebrow">Egzaminy i&nbsp;certyfikaty</span><h2>Przygotujemy Cię <em>do egzaminu</em></h2></div><p>Od matury i&nbsp;egzaminu ósmoklasisty po międzynarodowe certyfikaty – z&nbsp;angielskiego, niemieckiego, hiszpańskiego i&nbsp;francuskiego.</p></div>
+  <div class="exams rv"><span>Matura</span><span>Egzamin ósmoklasisty</span><span>Cambridge FCE</span><span>Cambridge CAE</span><span>Cambridge CPE</span><span>IELTS</span><span>TOEFL</span><span>TOEIC</span><span>BEC</span><span>TELC</span><span>Goethe-Zertifikat A1–C2</span><span>DELE</span><span>DELF</span><span>DALF</span><span>LCCI</span><span>Lektoraty na studiach</span></div>
+ </div>
+</section>
+
+<section class="sec rev" id="opinie">
+ <div class="wrap rev-grid">
+  <div class="rv">
+   <span class="eyebrow">Opinie w&nbsp;Google</span>
+   <div class="score">Doskonała</div>
+   <div class="stars" aria-hidden="true">★★★★<span class="half">★</span></div>
+   <p style="color:var(--muted);margin-top:12px">Na podstawie 92 opinii opublikowanych w&nbsp;Google.</p>
+  </div>
+  <div class="quotes">
+   <figure class="q rv" style="margin:0"><p>Dzięki pomocy od nauczycieli języka angielskiego z&nbsp;MLP udało mi się uzyskać certyfikat Cambridge C1 Advanced. Dziękuję bardzo :)</p><footer><svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2.1 5-4.4 6.6v5.5h7.1c4.2-3.8 6.5-9.5 6.5-16.1z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7C8.1 41.1 15.5 46 24 46z"/><path fill="#FBBC05" d="M11.8 28.2c-.4-1.3-.7-2.7-.7-4.2s.3-2.9.7-4.2v-5.7H4.5C3 17.1 2 20.4 2 24s1 6.9 2.5 9.9z"/><path fill="#EA4335" d="M24 10.8c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.2 29.9 2 24 2 15.5 2 8.1 6.9 4.5 14.1l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg>Opinia z&nbsp;Google · MydłoWKostce</footer></figure>
+   <figure class="q rv d1" style="margin:0"><p>Szybko i&nbsp;profesjonalnie. Tłumaczenie dokumentów na wczoraj od ręki. Dwie godziny i&nbsp;po problemie. Polecam ta firmę.</p><footer><svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2.1 5-4.4 6.6v5.5h7.1c4.2-3.8 6.5-9.5 6.5-16.1z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7C8.1 41.1 15.5 46 24 46z"/><path fill="#FBBC05" d="M11.8 28.2c-.4-1.3-.7-2.7-.7-4.2s.3-2.9.7-4.2v-5.7H4.5C3 17.1 2 20.4 2 24s1 6.9 2.5 9.9z"/><path fill="#EA4335" d="M24 10.8c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.2 29.9 2 24 2 15.5 2 8.1 6.9 4.5 14.1l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg>Opinia z&nbsp;Google · Jan Wyciślik</footer></figure>
+   <p class="note">W gotowej stronie opinie będą pobierane automatycznie z&nbsp;Google (widżet ładowany po przewinięciu, bez spowalniania strony).</p>
+  </div>
+ </div>
+</section>
+
+<section class="tl sec" style="padding:90px 0 0" id="tlumaczenia">
+ <div class="wrap tl-in rv">
+  <div><h3>Potrzebujesz tłumaczenia? <em style="font-style:italic">Biuro tłumaczeń MLP</em></h3><p>Tłumaczenia zwykłe i&nbsp;przysięgłe z&nbsp;zakresu prawa, biznesu, techniki, medycyny i&nbsp;administracji – we wszystkich językach świata. Prześlij plik, a&nbsp;bezpłatnie wycenimy tekst.</p></div>
+  <a class="link" href="https://mlp.opole.pl/tlumaczenia/">Zobacz tłumaczenia <span class="arr" aria-hidden="true">→</span></a>
+ </div>
+</section>
+
+<section class="sec" id="faq">
+ <div class="wrap faq-grid">
+  <div class="rv"><span class="eyebrow">FAQ</span><h2 style="margin-top:18px">Najczęstsze <em>pytania</em></h2><p style="color:var(--muted);margin-top:20px">Nie znalazłeś odpowiedzi? Zadzwoń: <a href="tel:+48605250009" style="font-weight:600">605&nbsp;250&nbsp;009</a></p></div>
+  <div class="rv d1">
+   <details><summary>Od jakiego wieku można zapisać dziecko?</summary><p>Zajęcia prowadzimy już dla dzieci od 5. roku życia, a&nbsp;także dla nastolatków, dorosłych i&nbsp;seniorów. Starszych uczniów przygotowujemy m.in. do egzaminu ósmoklasisty i&nbsp;matury.</p></details>
+   <details><summary>Czy trzeba płacić za cały rok z&nbsp;góry?</summary><p>Nie. Częstotliwość, czas trwania i&nbsp;okres nauki wybierasz sam, a&nbsp;cenę kursu dopasowujemy indywidualnie. Zajęcia odwołane wcześniej nie przepadają – można je odrobić w&nbsp;dogodnym terminie.</p></details>
+   <details><summary>Gdzie odbywają się zajęcia?</summary><p>W naszej szkole przy ul.&nbsp;Ozimskiej&nbsp;63A w&nbsp;Opolu (parter i&nbsp;II piętro), w&nbsp;salach z&nbsp;tablicami interaktywnymi. Wybrane kursy prowadzimy także online, a&nbsp;lektor może dojechać do domu lub firmy.</p></details>
+   <details><summary>Do jakich egzaminów przygotowujecie?</summary><p>Do matury, egzaminu ósmoklasisty oraz egzaminów międzynarodowych, m.in. Cambridge (FCE, CAE, CPE), IELTS, TOEFL, DELE, DELF i&nbsp;DALF oraz Goethe-Zertifikat A1–C2.</p></details>
+   <details><summary>Czy prowadzicie szkolenia dla firm?</summary><p>Tak – w&nbsp;Opolu, w&nbsp;województwie opolskim i&nbsp;w&nbsp;całej Polsce, z&nbsp;programem dopasowanym do branży i&nbsp;poziomu uczestników. Wykonujemy też audyty językowe.</p></details>
+  </div>
+ </div>
+</section>
+
+<section class="cta-band">
+ <div class="wrap">
+  <div class="cta-in rv">
+   <span class="ghost" aria-hidden="true">Hello!</span>
+   <h2>Zrób pierwszy krok. <em>Zapisz się.</em></h2>
+   <p>Zadzwoń lub napisz – pomożemy dobrać kurs, poziom i&nbsp;termin zajęć.</p>
+   <div class="hero-cta"><a class="btn btn-white" href="tel:+48605250009">Zadzwoń: 605&nbsp;250&nbsp;009</a><a class="btn btn-glass" href="mailto:info@mlp.opole.pl">info@mlp.opole.pl</a></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec contact" id="kontakt">
+ <div class="wrap">
+  <div class="head rv"><div><span class="eyebrow">Kontakt</span><h2>Zapraszamy <em>na Ozimską</em></h2></div></div>
+  <div class="contact-grid">
+   <div class="cbox rv">
+    <dl class="dl">
+     <div><dt>Telefon</dt><dd><a href="tel:+48605250009">605&nbsp;250&nbsp;009</a> · <a href="tel:+48665080009">665&nbsp;080&nbsp;009</a></dd></div>
+     <div><dt>E-mail</dt><dd><a href="mailto:info@mlp.opole.pl">info@mlp.opole.pl</a></dd></div>
+     <div><dt>Godziny otwarcia</dt><dd><span class="todo">do uzupełnienia</span></dd></div>
+    </dl>
+    <div class="visit">
+     <img src="assets/budynek-480.webp" srcset="assets/budynek-480.webp 480w, assets/budynek-700.webp 700w" sizes="180px" width="480" height="480" alt="Budynek szkoły przy ul. Ozimskiej 63A w Opolu" loading="lazy">
+     <dl class="dl"><div><dt>Adres</dt><dd>ul.&nbsp;Ozimska&nbsp;63A<br>parter i&nbsp;II piętro<br>45-368 Opole</dd></div><div><dd><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Metropolitan+Language+Professionals+Ozimska+63A+Opole" rel="noopener">Wyznacz trasę <span class="arr" aria-hidden="true">→</span></a></dd></div></dl>
+    </div>
+   </div>
+   <div class="cbox rv d1">
+    <h3 style="font-family:var(--serif);font-size:1.8rem;font-weight:450;margin-bottom:20px">Napisz do nas</h3>
+    <form action="#" onsubmit="return false">
+     <div class="f"><label for="n">Imię i&nbsp;nazwisko</label><input id="n" autocomplete="name"></div>
+     <div class="f"><label for="t">Telefon</label><input id="t" type="tel" autocomplete="tel"></div>
+     <div class="f full"><label for="e">E-mail</label><input id="e" type="email" autocomplete="email"></div>
+     <div class="f full"><label for="m">Wiadomość</label><textarea id="m" placeholder="Np. kurs angielskiego dla dziecka, 10 lat"></textarea></div>
+     <div class="f full"><button class="btn btn-ink" type="submit" style="cursor:not-allowed">Wyślij wiadomość <span class="arr" aria-hidden="true">→</span></button></div>
+     <p class="form-note">Projekt poglądowy – formularz jest nieaktywny. W&nbsp;gotowej stronie zostanie podłączony obecny formularz kontaktowy.</p>
+    </form>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer class="ftr">
+ <div class="wrap">
+  <div class="ftr-grid">
+   <div><img src="assets/logo-white-300.webp" width="150" height="84" alt="Metropolitan Language Professionals" loading="lazy"><p style="margin-top:18px;max-width:22em">Szkoła językowa i&nbsp;biuro tłumaczeń w&nbsp;Opolu.</p></div>
+   <div><h4>Kursy</h4><ul><li><a href="https://mlp.opole.pl/kursy-korepetycje-jezykowe/angielski/">Angielski</a></li><li><a href="https://mlp.opole.pl/kursy-korepetycje-jezykowe/hiszpanski/">Hiszpański</a></li><li><a href="https://mlp.opole.pl/kursy-korepetycje-jezykowe/francuski/">Francuski</a></li><li><a href="https://mlp.opole.pl/o-firmie/">Dla firm</a></li></ul></div>
+   <div><h4>Kontakt</h4><ul><li>ul. Ozimska 63A, Opole</li><li><a href="tel:+48605250009">605 250 009</a></li><li><a href="mailto:info@mlp.opole.pl">info@mlp.opole.pl</a></li></ul></div>
+   <div><h4>Social</h4><ul><li><a href="https://www.facebook.com/Metropolitan-Language-Professionals-372765722748711" rel="noopener">Facebook</a></li><li><a href="https://www.instagram.com/metropolitan_language_opole/" rel="noopener">Instagram</a></li><li><a href="https://www.linkedin.com/mwlite/company/language-professionals-a-%C5%82-" rel="noopener">LinkedIn</a></li></ul></div>
+  </div>
+  <div class="bottom"><span>© Metropolitan Language Professionals</span><span>Projekt poglądowy nowej strony głównej · zdjęcia ilustracyjne: Unsplash</span></div>
+ </div>
+</footer>
+
+<nav class="mbar" aria-label="Szybki kontakt"><a href="tel:+48605250009"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Zadzwoń</a><a href="#kontakt">Zapisz się →</a></nav>
+<div class="demo">Projekt poglądowy</div>
+<script>
+(function(){var d=document.documentElement;d.classList.add('js');var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function count(el){var t=+el.dataset.count,s=+(el.dataset.from||0);if(rm)return;var t0=performance.now(),D=1600;(function f(n){var p=Math.min(1,(n-t0)/D),e=1-Math.pow(1-p,3);el.textContent=Math.round(s+(t-s)*e);if(p<1)requestAnimationFrame(f)})(t0)}
+if(!('IntersectionObserver' in window)){d.classList.remove('js');return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add('in');e.target.querySelectorAll('[data-count]').forEach(count);io.unobserve(e.target)})},{rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});})();
+</script>
+</body>
+</html>
